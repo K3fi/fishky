@@ -1,0 +1,77 @@
+
+
+<int>:
+    rows: 3
+    fishlvl1: lbl_fish
+    bayt: buyt
+    bt_buy: bt_buy
+    lab_money: lb_money
+
+
+	GridLayout:
+	    cols: 1
+
+	    BoxLayout:
+	        orientation: 'vertical'
+
+	        Label:
+                id: lbl_fish
+                color: "blue"
+
+                background_color: "red"
+
+	        Button:
+	            id: bttn_fish
+	            text: "рыбачить"
+
+	            on_release:
+	                root.fishing()
+
+	        Button:
+                text: "sell"
+                color: "yellow"
+                id: lb_money
+                on_release:
+                    root.sell()
+
+
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            BoxLayout:
+                orientation: 'vertical'
+
+                Button:
+                    text: "бамбуковая удочка"
+                    on_release:
+                        root.sel_bamb()
+
+                Button:
+                    text: "стальная удочка"
+                    on_release:
+                        root.sel_iron()
+
+
+                Button:
+                    text: "люминивая удочка"
+                    on_release:
+                        root.sel_alu()
+
+
+                Button:
+                    text: "карбоновая удочка"
+                    on_release:
+                        root.sel_carb()
+
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    text: "8"
+                    id: buyt
+                Button:
+                    text: "купить"
+                    id: bt_buy
+                    size: .4, .1
+                    on_release:
+                        root.buy()
